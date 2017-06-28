@@ -1,0 +1,577 @@
+[{
+    "annotation_class": "phase2",
+    "id": "30",
+    "name": "Outside Over Garage Lights",
+    "time": [
+        "1350939542.52",
+        "1350939603.94"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "30",
+    "name": "Outside Over Garage Lights",
+    "time": [
+        "1350939662.41",
+        "1350939724.23"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "30",
+    "name": "Outside Over Garage Lights",
+    "time": [
+        "1350939782.96",
+        "1350939842.96"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "29",
+    "name": "Outside Front Door Lights",
+    "time": [
+        "1350939916.31",
+        "1350939976.31"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "29",
+    "name": "Outside Front Door Lights",
+    "time": [
+        "1350940037.05",
+        "1350940097.05"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "29",
+    "name": "Outside Front Door Lights",
+    "time": [
+        "1350940157.05",
+        "1350940217.05"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "15",
+    "name": "Downstairs Hallway Lights",
+    "time": [
+        "1350940277.05",
+        "1350940337.05"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "15",
+    "name": "Downstairs Hallway Lights",
+    "time": [
+        "1350940382.22",
+        "1350940460.01"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "15",
+    "name": "Downstairs Hallway Lights",
+    "time": [
+        "1350940517.79",
+        "1350940577.79"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "34",
+    "name": "Stairway Lights",
+    "time": [
+        "1350940637.12",
+        "1350940697.79"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "34",
+    "name": "Stairway Lights",
+    "time": [
+        "1350940757.79",
+        "1350940817.79"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "34",
+    "name": "Stairway Lights",
+    "time": [
+        "1350940877.22",
+        "1350940937.79"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "14",
+    "name": "Downstairs Bathroom Lights",
+    "time": [
+        "1350941415.62",
+        "1350941475.62"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "14",
+    "name": "Downstairs Bathroom Lights",
+    "time": [
+        "1350941534.82",
+        "1350941594.82"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "14",
+    "name": "Downstairs Bathroom Lights",
+    "time": [
+        "1350941654.82",
+        "1350941714.82"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "12",
+    "name": "Downstairs Bathroom Fan",
+    "time": [
+        "1350941774.08",
+        "1350941834.08"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "12",
+    "name": "Downstairs Bathroom Fan",
+    "time": [
+        "1350941894.08",
+        "1350941954.82"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "12",
+    "name": "Downstairs Bathroom Fan",
+    "time": [
+        "1350942015.56",
+        "1350942075.56"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "13",
+    "name": "Downstairs Bathroom Fan Lights",
+    "time": [
+        "1350942134.82",
+        "1350942194.82"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "13",
+    "name": "Downstairs Bathroom Fan Lights",
+    "time": [
+        "1350942254.82",
+        "1350942314.82"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "13",
+    "name": "Downstairs Bathroom Fan Lights",
+    "time": [
+        "1350942375.56",
+        "1350942435.56"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "5",
+    "name": "BR2 Lights",
+    "time": [
+        "1350942494.08",
+        "1350942554.08"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "5",
+    "name": "BR2 Lights",
+    "time": [
+        "1350942614.08",
+        "1350942674.08"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "5",
+    "name": "BR2 Lights",
+    "time": [
+        "1350942734.82",
+        "1350942794.82"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "4",
+    "name": "BR2 Closet Light",
+    "time": [
+        "1350942854.08",
+        "1350942914.08"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "4",
+    "name": "BR2 Closet Light",
+    "time": [
+        "1350942974.95",
+        "1350943035.56"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "4",
+    "name": "BR2 Closet Light",
+    "time": [
+        "1350943094.82",
+        "1350943154.82"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "6",
+    "name": "Backyard Light",
+    "time": [
+        "1350943215.65",
+        "1350943274.82"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "6",
+    "name": "Backyard Light",
+    "time": [
+        "1350943335.58",
+        "1350943394.82"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "6",
+    "name": "Backyard Light",
+    "time": [
+        "1350943454.82",
+        "1350943514.82"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "3",
+    "name": "BR1 Lights",
+    "time": [
+        "1350943574.82",
+        "1350943634.82"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "3",
+    "name": "BR1 Lights",
+    "time": [
+        "1350943696.31",
+        "1350943756.31"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "3",
+    "name": "BR1 Lights",
+    "time": [
+        "1350943815.56",
+        "1350943877.05"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "1",
+    "name": "BR1 Closet Light",
+    "time": [
+        "1350943935.56",
+        "1350943995.56"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "1",
+    "name": "BR1 Closet Light",
+    "time": [
+        "1350944056.31",
+        "1350944116.31"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "1",
+    "name": "BR1 Closet Light",
+    "time": [
+        "1350944175.56",
+        "1350944235.56"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "18",
+    "name": "GR Lights",
+    "time": [
+        "1350944295.56",
+        "1350944355.56"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "18",
+    "name": "GR Lights",
+    "time": [
+        "1350944416.31",
+        "1350944476.31"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "18",
+    "name": "GR Lights",
+    "time": [
+        "1350944536.31",
+        "1350944596.31"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "10",
+    "name": "Dining Room Lights",
+    "time": [
+        "1350944655.56",
+        "1350944715.56"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "10",
+    "name": "Dining Room Lights",
+    "time": [
+        "1350944776.31",
+        "1350944836.31"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "10",
+    "name": "Dining Room Lights",
+    "time": [
+        "1350944894.08",
+        "1350944956.31"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "22",
+    "name": "Kitchen Lights",
+    "time": [
+        "1350945014.82",
+        "1350945074.82"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "22",
+    "name": "Kitchen Lights",
+    "time": [
+        "1350945134.82",
+        "1350945194.82"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "22",
+    "name": "Kitchen Lights",
+    "time": [
+        "1350945254.08",
+        "1350945314.08"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "23",
+    "name": "Kitchen Under Cabinet Lights",
+    "time": [
+        "1350945374.82",
+        "1350945434.82"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "23",
+    "name": "Kitchen Under Cabinet Lights",
+    "time": [
+        "1350945494.82",
+        "1350945554.82"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "23",
+    "name": "Kitchen Under Cabinet Lights",
+    "time": [
+        "1350945615.56",
+        "1350945675.56"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "31",
+    "name": "Over Sink Light",
+    "time": [
+        "1350945731.12",
+        "1350945795.56"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "31",
+    "name": "Over Sink Light",
+    "time": [
+        "1350945855.56",
+        "1350945917.79"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "31",
+    "name": "Over Sink Light",
+    "time": [
+        "1350945975.56",
+        "1350946035.56"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "33",
+    "name": "Powder Rm Lights",
+    "time": [
+        "1350946099.09",
+        "1350946155.93"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "33",
+    "name": "Powder Rm Lights",
+    "time": [
+        "1350946214.65",
+        "1350946275.03"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "33",
+    "name": "Powder Rm Lights",
+    "time": [
+        "1350946334.82",
+        "1350946397.05"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "37",
+    "name": "Upstairs Hallway Lights",
+    "time": [
+        "1350946454.82",
+        "1350946514.82"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "37",
+    "name": "Upstairs Hallway Lights",
+    "time": [
+        "1350946574.38",
+        "1350946635.14"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "37",
+    "name": "Upstairs Hallway Lights",
+    "time": [
+        "1350946694.38",
+        "1350946758.16"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "26",
+    "name": "Master BR Entry Lights",
+    "time": [
+        "1350946814.38",
+        "1350946874.38"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "26",
+    "name": "Master BR Entry Lights",
+    "time": [
+        "1350946934.6",
+        "1350946994.38"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "26",
+    "name": "Master BR Entry Lights",
+    "time": [
+        "1350947054.38",
+        "1350947114.38"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "27",
+    "name": "Master BR Lights",
+    "time": [
+        "1350947174.44",
+        "1350947234.44"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "27",
+    "name": "Master BR Lights",
+    "time": [
+        "1350947295.14",
+        "1350947355.14"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "27",
+    "name": "Master BR Lights",
+    "time": [
+        "1350947413.62",
+        "1350947476.65"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "28",
+    "name": "Master BR Walk-in Closet Lights",
+    "time": [
+        "1350947534.26",
+        "1350947596.0"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "28",
+    "name": "Master BR Walk-in Closet Lights",
+    "time": [
+        "1350947656.43",
+        "1350947718.92"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "28",
+    "name": "Master BR Walk-in Closet Lights",
+    "time": [
+        "1350947777.15",
+        "1350947835.74"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "25",
+    "name": "Master BA Lights",
+    "time": [
+        "1350947893.92",
+        "1350947955.89"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "25",
+    "name": "Master BA Lights",
+    "time": [
+        "1350948015.14",
+        "1350948075.14"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "25",
+    "name": "Master BA Lights",
+    "time": [
+        "1350948133.62",
+        "1350948197.41"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "24",
+    "name": "Master BA Heat Lamp",
+    "time": [
+        "1350948254.41",
+        "1350948314.38"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "24",
+    "name": "Master BA Heat Lamp",
+    "time": [
+        "1350948375.15",
+        "1350948440.93"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "24",
+    "name": "Master BA Heat Lamp",
+    "time": [
+        "1350948495.14",
+        "1350948555.14"
+    ]
+}]

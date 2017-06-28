@@ -1,0 +1,4 @@
+https://www.kaggle.com/c/belkin-energy-disaggregation-competition/download/H1_CSV.zip
+https://www.kaggle.com/c/belkin-energy-disaggregation-competition/download/H2_CSV.zip
+https://www.kaggle.com/c/belkin-energy-disaggregation-competition/download/H3_CSV.zip
+https://www.kaggle.com/c/belkin-energy-disaggregation-competition/download/H4_CSV.zip

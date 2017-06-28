@@ -1,0 +1,161 @@
+[{
+    "annotation_class": "phase1",
+    "id": "2",
+    "name": "BR1 DVD",
+    "time": [
+        "1351099620.0",
+        "1351099680.0"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "2",
+    "name": "BR1 DVD",
+    "time": [
+        "1351099740.0",
+        "1351099800.0"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "2",
+    "name": "BR1 DVD",
+    "time": [
+        "1351099860.0",
+        "1351099920.0"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "2",
+    "name": "BR1 DVD",
+    "time": [
+        "1351099980.0",
+        "1351100040.0"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "20",
+    "name": "Garage Door Opener",
+    "time": [
+        "1351100100.0",
+        "1351100174.62"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "20",
+    "name": "Garage Door Opener",
+    "time": [
+        "1351100217.91",
+        "1351100294.09"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "20",
+    "name": "Garage Door Opener",
+    "time": [
+        "1351100338.43",
+        "1351100415.14"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "20",
+    "name": "Garage Door Opener",
+    "time": [
+        "1351100457.91",
+        "1351100536.18"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "21",
+    "name": "Garage Lights",
+    "time": [
+        "1351100580.0",
+        "1351100639.23"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "21",
+    "name": "Garage Lights",
+    "time": [
+        "1351100700.0",
+        "1351100759.23"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "21",
+    "name": "Garage Lights",
+    "time": [
+        "1351100820.0",
+        "1351100881.32"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "21",
+    "name": "Garage Lights",
+    "time": [
+        "1351100940.0",
+        "1351101000.8"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "9",
+    "name": "Coffee Maker",
+    "time": [
+        "1351101720.0",
+        "1351102439.95"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "9",
+    "name": "Coffee Maker",
+    "time": [
+        "1351103160.0",
+        "1351103824.28"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "17",
+    "name": "GR LCD TV",
+    "time": [
+        "1351104750.0",
+        "1351104832.82"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "17",
+    "name": "GR LCD TV",
+    "time": [
+        "1351104930.0",
+        "1351105012.82"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "17",
+    "name": "GR LCD TV",
+    "time": [
+        "1351105110.0",
+        "1351105194.24"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "17",
+    "name": "GR LCD TV",
+    "time": [
+        "1351105290.0",
+        "1351105371.39"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "19",
+    "name": "GR PS4",
+    "time": [
+        "1351107060.92",
+        "1351107164.25"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "19",
+    "name": "GR PS4",
+    "time": [
+        "1351107182.77",
+        "1351107290.28"
+    ]
+}]

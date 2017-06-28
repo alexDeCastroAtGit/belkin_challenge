@@ -1,0 +1,41 @@
+[{
+    "annotation_class": "phase1",
+    "id": "38",
+    "name": "Washer",
+    "time": [
+        "1334355870.83",
+        "1334355988.82"
+    ]
+}, {
+    "annotation_class": "phase2",
+    "id": "16",
+    "name": "Dryer",
+    "time": [
+        "1334356044.94",
+        "1334356129.95"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "35",
+    "name": "Toaster",
+    "time": [
+        "1334356454.5",
+        "1334356498.36"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "32",
+    "name": "Portable Vacuum",
+    "time": [
+        "1334356945.21",
+        "1334357013.15"
+    ]
+}, {
+    "annotation_class": "phase1",
+    "id": "8",
+    "name": "Central Vacuum",
+    "time": [
+        "1334357055.13",
+        "1334357091.43"
+    ]
+}]
