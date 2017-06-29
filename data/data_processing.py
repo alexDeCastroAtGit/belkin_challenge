@@ -1,15 +1,19 @@
-import pandas as pd
-import numpy as np
 from cmath import phase
 from datetime import datetime, timedelta
+from functools import reduce
+from random import sample, seed
+import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
-matplotlib.style.use('ggplot') # yhat wrapper
-
-from random import sample, seed
-import os
-
 import cProfile
+import os
+matplotlib.style.use('ggplot') # yhat wrapper
+"""
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot, or matplotlib.backends 
+is imported for the first time
+"""
+matplotlib.use('Agg')
 
 ## to profile code
 #cProfile.run('your python command here')
@@ -60,7 +64,7 @@ print('This is the data file we will be working with:', train_dir[0])
 #LF1V = pd.read_csv(train_dir[0] + u'/LF1V.csv', squeeze=True, names=[u'E_%s' % k for k in range(0,6)]) # returns series if parsed data only contains one column
 
 # Phase 1
-LF1V_train = [get_measurements(dir_path) for dir_path in train_dir]
+LF1V_train = [get_measurements(dir_path, 'LF1V') for dir_path in train_dir]
 LF1I_train = [get_measurements(dir_path, 'LF1I') for dir_path in train_dir]
 
 # Phase 2
@@ -96,17 +100,20 @@ power_features_2 = [compute_power_features(*pair) for pair in zip(LF2V_train_ind
 
 def create_fig_dir(dir_path):
     fig_path = dir_path + '/figs'
+    os.system('rm -R %s' % fig_path)
     if not os.path.exists(fig_path):
         os.makedirs(fig_path)
     return fig_path
 
 fig_dir = [create_fig_dir(dir_path) for dir_path in train_dir]
 
-test_dir = train_dir[0] + '/figs'
+
+## test dir
+#test_dir = train_dir[0] + '/figs'
 
 def plot_signal(signal_ts, dir_path, name=None):
     plt.figure()
-    signal_ts.plot()
+    signal_ts.plot(subplots=True, figsize=(6, 6))
     if name:
         label = name
     else:
@@ -144,45 +151,52 @@ tagging_info = [load_and_transform_tagging_info(file_path=(dir_path + '/TaggingI
 
 ## searching for the master bathroom fan
 def measure_spikes(signal_ts, appliance_data, use_buffer=False, buffer_size=5):
-    if use_buffer:
+    """
+    - consider calling the plotting the signals here too -- for reference 
+    """
+    if use_buffer: ## remember also that there are delays in the replies
         buffer = timedelta(seconds=buffer_size)
     else:
         buffer = timedelta(seconds=0)
+
     def zoom_into_appliance_window(appliance_id):
-        appliance_ts = (signal_ts.index >= appliance_data['turned_ON'][appliance_id] - buffer) & \
+        isApplianceOn = (signal_ts.index >= appliance_data['turned_ON'][appliance_id] - buffer) & \
                        (signal_ts.index <= appliance_data['turned_OFF'][appliance_id] + buffer)
         # for testing only
-        print(sum(appliance_ts))
-        return signal_ts.loc[appliance_ts]
-    appliance_responses = [zoom_into_appliance_window(k) for k, app in enumerate(appliance_data['appliance'])]
-    return appliance_responses
+        #print(sum(isApplianceOn))
+        appliance_ts = signal_ts.loc[isApplianceOn]
+        appliance_delta_ts = appliance_ts.diff(1).abs().dropna() #(appliance_ts.diff(1) / appliance_ts.shift(-1)).abs()
+        # changing the names for reference ## call plotting function here
+        appliance_delta_ts.columns = [col + '_delta' for col in appliance_ts.columns]
+        jump = appliance_ts.abs().max()
+        variance = appliance_delta_ts.abs().sum()
+        return pd.concat([jump, variance]).values
+
+    #def compute_total_variance(signal_ts):  # or whichever other measure we want
+    #    return signal_ts.diff(1).abs().sum()
+
+    #[zoom_into_appliance_window(k) for k, app in enumerate(appliance_data['appliance'])]
+    spike_measures = [zoom_into_appliance_window(k) for k, app in enumerate(appliance_data['appliance'])]
+    power_matrix = np.column_stack(spike_measures).transpose()
+    names = ['real_power_max', 'react_power_max', 'app_power_max', 'ph_max', 'real_power_var', 'react_power_var', 'app_power_var', 'ph_var']
+    power_df = pd.DataFrame(power_matrix, columns=names) # optional: index=appliance_data['appliance']
+    #power_reduce = reduce((lambda x,y: pd.concat(x, y)), power_responses)
+    #appliance_data['jump_size', 'total_variance'] = power_responses
+    return pd.concat([appliance_data, power_df], axis=1) #power_matrix #appliance_data
 
 ## test appliance responses
-#test_responses = measure_spikes(signal_ts=features_1_transformed[0], appliance_data=tagging_info[0])
+#test_responses = measure_spikes(signal_ts=features_1_transformed[1], appliance_data=tagging_info[1])
 
 ## measuring the responses for phase 1 alone
-signal_tags_pairs_1 = zip(features_1_transformed, tagging_info)
-responses_per_experiment = [measure_spikes(*p) for p in signal_tags_pairs_1]
+signal_tags_pairs_1 = zip(features_1_transformed, tagging_info) ## nested for loop
 
-## can use another zipping trick here to compute data
-
-    responses =
-    appliance_signal = (signal_ts.index >= appliance_info['ON_time'][appliance_id] - buffer) & \
-                      (baseline_dev.index <= tagging_info['OFF_time'][appliance_id] + buffer)
-    response_ts = baseline_dev.loc[applianceSpiked]
-    delta_response = (response_ts.diff(1) / response_ts.shift(-1)).abs()
-    delta_std = delta_response.std()
-    delta_mean = delta_response.mean()
-    #delta_response.plot()
-    #print(delta_response.max(), delta_mean + 2*delta_std)
-    return delta_response.max() #> delta_mean + 2*delta_std #response_ts.max(), response_ts
-
-#seed(42)
-#random_test = sample(range(len(tagging_info)), 10)
-#test_cases = [compute_L1_spike(k, True) for k in random_test]
-tagging_info['L1_spikes'] = [compute_L1_spike(k, True) for k in range(len(tagging_info))]
+#### generates responses per appliance and their deltas
+## respose_lists_2 is missing
+power_responses_1 = pd.concat([measure_spikes(*p) for p in signal_tags_pairs_1])
+power_responses_1.to_csv(path_or_buf=data_dir + '/summary_phase_1.csv', sep='\t')
 
 ## how to fit a gaussian curve to a time series? feature extraction
+## gaussian processes?
 
 ## create a data frame with
 
