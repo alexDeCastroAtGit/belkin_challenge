@@ -21,7 +21,7 @@ matplotlib.use('Agg')
 
 # for accessing the file in a child folder # generalize this into a function
 base_dir = os.path.dirname(os.path.realpath('__file__'))
-data_dir = os.path.join(base_dir, "data/CSV_OUT")
+data_dir = os.path.join(base_dir, "CSV_OUT")
 
 def get_data_dirs(type='Tagged_Training'):
     return [os.path.join(data_dir, dir_name) for dir_name in os.listdir(data_dir) if type in dir_name]
@@ -53,9 +53,10 @@ def get_measurements(dir_path, type='LF1V'): # type = 'LF*I', 'LF*V', 'HF' and w
     else:
         names = [u'k_%s' % f for f in range(0, N_FFT)]
     df = pd.read_csv(path, squeeze=True, names=names)
-    df_cpx = df.apply(lambda col: col.apply(lambda val: complex(val.replace('i','j'))))
-    df_cpx.columns.name = type
-    return df_cpx
+    if type is not 'HF':
+        df = df.apply(lambda col: col.apply(lambda val: complex(val.replace('i','j'))))
+    df.columns.name = type
+    return df
 
 
 print('This is the data file we will be working with:', train_dir[0])
@@ -70,6 +71,9 @@ LF1I_train = [get_measurements(dir_path, 'LF1I') for dir_path in train_dir]
 # Phase 2
 LF2V_train = [get_measurements(dir_path, 'LF2V') for dir_path in train_dir]
 LF2I_train = [get_measurements(dir_path, 'LF2I') for dir_path in train_dir]
+
+# HF noise
+#HF = [get_measurements(dir_path, 'HF') for dir_path in train_dir] ## too heavy to cache: causes stackoverflow
 
 def create_indexed_signal(timestamps, signal): # both assumed to be time frames
     signal['timestamps'] = timestamps
@@ -107,11 +111,10 @@ def create_fig_dir(dir_path):
 
 fig_dir = [create_fig_dir(dir_path) for dir_path in train_dir]
 
-
 ## test dir
 #test_dir = train_dir[0] + '/figs'
 
-def plot_signal(signal_ts, dir_path, name=None):
+def plot_signal(signal_ts, dir_path, name=None, *args): # args is usually tagging info
     plt.figure()
     signal_ts.plot(subplots=True, figsize=(6, 6))
     if name:
@@ -120,37 +123,47 @@ def plot_signal(signal_ts, dir_path, name=None):
         label = 'generic'
     fig_path = dir_path + '/' + label
     #plt.title('A signal is being plotted') # needs customisation
-    plt.savefig(dir_path + '/' + label)
+    #plt.xticks(args[0]['turned_ON'].values, args[0]['appliance']) # with labels
+    #plt.xticks(args[0]['turned_ON'].values)
+    plt.savefig(fig_path)
     plt.close()
+    # if args:
+    #     print(args[0])
     return 'Plot saved to %s' % fig_path
 
 ## consider creating a hash/table or dictionary
 def resample_and_normalize(signal_ts): # use indicative names
-    resampled_signal = signal_ts.resample('1S').mean()
-    cum_mean_signal = resampled_signal.expanding().mean()
-    return (resampled_signal.shift(-1) - cum_mean_signal)/cum_mean_signal
+    smoothed_ts = signal_ts.rolling(window=6).mean() # window size is a hyperparameter
+    downsampled_ts = smoothed_ts.resample('1S').mean().shift(1)
+    diffed_ts = smoothed_ts.resample('1S').mean().diff(1)
+    return diffed_ts/downsampled_ts ## or consider a delayed diffed window
+    # resampled_signal = signal_ts.resample('1S').mean()
+    # cum_mean_signal = resampled_signal.expanding().mean()
+    # return (resampled_signal.shift(-1) - cum_mean_signal)/cum_mean_signal
+
 
 features_1_transformed = [signal_ts.apply(resample_and_normalize, axis=0) for signal_ts in power_features_1]
 features_2_transformed = [signal_ts.apply(resample_and_normalize, axis=0) for signal_ts in power_features_2]
 
-## will need a double-loop here
-## WARNING: this loops may hog a lot of time
-power_figs_1 = [plot_signal(signal, fig_dir[k], 'power_signals_1') for k, signal in enumerate(features_1_transformed)]
-power_figs_2 = [plot_signal(signal, fig_dir[k], 'power_signals_2') for k, signal in enumerate(features_2_transformed)]
-
-
 ## appliance data
 def load_and_transform_tagging_info(file_path):
-    df = pd.read_csv(file_path, squeeze=True, names=['id','appliance','turned_ON', 'turned_OFF'])
+    df = pd.read_csv(file_path, squeeze=True, names=['id', 'appliance', 'turned_ON', 'turned_OFF'])
     df[['turned_ON', 'turned_OFF']] = df[['turned_ON', 'turned_OFF']].applymap(lambda ts: datetime.fromtimestamp(ts))
+    #df['turned_ON'] , df['turned_OFF'] = pd.to_datetime(df['turned_ON'], unit='s'), pd.to_datetime(df['turned_OFF'], unit='s')
     return df
 
 ## test load
 file_path = train_dir[0] + u'/TaggingInfo.csv'
 tagging_info = [load_and_transform_tagging_info(file_path=(dir_path + '/TaggingInfo.csv')) for dir_path in train_dir]
 
+## will need a double-loop here
+## WARNING: this loops may hog a lot of time
+power_figs_1 = [plot_signal(signal, fig_dir[k], 'power_signals_1', tagging_info[k]) for k, signal in enumerate(features_1_transformed)]
+power_figs_2 = [plot_signal(signal, fig_dir[k], 'power_signals_2', tagging_info[k]) for k, signal in enumerate(features_2_transformed)]
+
 ## searching for the master bathroom fan
-def measure_spikes(signal_ts, appliance_data, use_buffer=False, buffer_size=5):
+## what to measure here?
+def measure_spikes(signal_ts, appliance_data, use_buffer=False, buffer_size=5, plot_appliances=False, fig_dir=None):
     """
     - consider calling the plotting the signals here too -- for reference 
     """
@@ -159,18 +172,38 @@ def measure_spikes(signal_ts, appliance_data, use_buffer=False, buffer_size=5):
     else:
         buffer = timedelta(seconds=0)
 
+    def plot_appliance_window(appliance_ts, appliance_name, dir_path):
+        file_name = appliance_name.replace("/", "_").replace(" ", "_").lower()
+        plt.figure()
+        plt.title(file_name)
+        appliance_ts.plot(subplots=True)
+        fig_path = dir_path + '/' + file_name
+        plt.savefig(fig_path)
+        plt.close()
+        return
+
     def zoom_into_appliance_window(appliance_id):
         isApplianceOn = (signal_ts.index >= appliance_data['turned_ON'][appliance_id] - buffer) & \
                        (signal_ts.index <= appliance_data['turned_OFF'][appliance_id] + buffer)
         # for testing only
         #print(sum(isApplianceOn))
+
+        ## will need these for plotting
         appliance_ts = signal_ts.loc[isApplianceOn]
+
+        if plot_appliances:
+            plot_appliance_window(appliance_ts, appliance_data['appliance'][appliance_id], fig_dir)
+
         appliance_delta_ts = appliance_ts.diff(1).abs().dropna() #(appliance_ts.diff(1) / appliance_ts.shift(-1)).abs()
         # changing the names for reference ## call plotting function here
         appliance_delta_ts.columns = [col + '_delta' for col in appliance_ts.columns]
-        jump = appliance_ts.abs().max()
-        variance = appliance_delta_ts.abs().sum()
-        return pd.concat([jump, variance]).values
+        #jump = appliance_ts.abs().max() # how to ensure this maximum is a response? -- problem is a multilabel classification problem
+        #variance = appliance_delta_ts.abs().sum()
+        moving_max_spike = appliance_ts.abs().expanding().max()
+        argmax_spikes = moving_max_spike.idxmax()
+        spike_optimal_values = [moving_max_spike.iloc[:,k][idx] for k, idx in enumerate(argmax_spikes) ]
+        #return pd.concat([argmax_spikes, spike_optimal_values]).values
+        return pd.concat([pd.DataFrame(data=spike_optimal_values), argmax_spikes], ignore_index=True).values
 
     #def compute_total_variance(signal_ts):  # or whichever other measure we want
     #    return signal_ts.diff(1).abs().sum()
@@ -178,39 +211,67 @@ def measure_spikes(signal_ts, appliance_data, use_buffer=False, buffer_size=5):
     #[zoom_into_appliance_window(k) for k, app in enumerate(appliance_data['appliance'])]
     spike_measures = [zoom_into_appliance_window(k) for k, app in enumerate(appliance_data['appliance'])]
     power_matrix = np.column_stack(spike_measures).transpose()
-    names = ['real_power_max', 'react_power_max', 'app_power_max', 'ph_max', 'real_power_var', 'react_power_var', 'app_power_var', 'ph_var']
+    names = ['real_power_spike',
+             'react_power_spike',
+             'app_power_spike',
+             'ph_max_spike',
+             'real_power_tick',
+             'react_power_tick',
+             'app_power_tick',
+             'ph_max_tick']
+    # names = ['real_power_max',
+    #          'react_power_max',
+    #          'app_power_max',
+    #          'ph_max',
+    #          'real_power_var',
+    #          'react_power_var',
+    #          'app_power_var',
+    #          'ph_var']
     power_df = pd.DataFrame(power_matrix, columns=names) # optional: index=appliance_data['appliance']
     #power_reduce = reduce((lambda x,y: pd.concat(x, y)), power_responses)
     #appliance_data['jump_size', 'total_variance'] = power_responses
     return pd.concat([appliance_data, power_df], axis=1) #power_matrix #appliance_data
 
 ## test appliance responses
-#test_responses = measure_spikes(signal_ts=features_1_transformed[1], appliance_data=tagging_info[1])
+test_responses = measure_spikes(signal_ts=features_1_transformed[3], appliance_data=tagging_info[3], plot_appliances=True, fig_dir=fig_dir[3])
 
 ## measuring the responses for phase 1 alone
-signal_tags_pairs_1 = zip(features_1_transformed, tagging_info) ## nested for loop
 
-#### generates responses per appliance and their deltas
-## respose_lists_2 is missing
-power_responses_1 = pd.concat([measure_spikes(*p) for p in signal_tags_pairs_1])
-power_responses_1.to_csv(path_or_buf=data_dir + '/summary_phase_1.csv', sep='\t')
+phase_dict = {'one': features_1_transformed, 'two': features_2_transformed}
+
+def generate_tuples(phase_str): # more pythonic way to generate tuples?
+    feature_list = phase_dict[phase_str]
+    l = len(feature_list)
+    print('works till here')
+    return zip(phase_dict[phase_str],
+               tagging_info,
+               l * [False],  # buffer?
+               l * [None],  # buffer window
+               l * [True],  # plot?
+               fig_dir)  # save plot here
 
 ## how to fit a gaussian curve to a time series? feature extraction
 ## gaussian processes?
+## how to use the HF data?
 
-## create a data frame with
+# def test():
+#     # include some asserts here, PN style
+#     return None
 
-#print(os.listdir(os.path.join(training_data[0])))
+def main():
+    """
+    include all the main computations here
+    """
+    ## generates responses per appliance and their deltas
+    power_responses_1 = pd.concat([measure_spikes(*p) for p in generate_tuples('one')])
+    power_responses_1.to_csv(path_or_buf=data_dir + '/summary_phase_1.csv', sep='\t')
 
-# def parser(x):
-#     return datetime.strptime('190' + x, '%Y-%m')
-#
-#
-# series = read_csv('shampoo-sales.csv', header=0, parse_dates=[0], index_col=0, squeeze=True, date_parser=parser)
-# print(series.head())
-# series.plot()
-# plt.show()
+    power_responses_2 = pd.concat([measure_spikes(*p) for p in generate_tuples('two')])
+    power_responses_2.to_csv(path_or_buf=data_dir + '/summary_phase_2.csv', sep='\t')
 
-def test():
-    # include some asserts here, PN style
-    return None
+    ## include messages
+
+    return
+
+if __name__ == "__main__":
+    main()
