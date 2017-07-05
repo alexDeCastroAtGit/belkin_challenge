@@ -13,7 +13,7 @@ from cmath import phase
 
 # for accessing the file in a child folder # generalize this into a function
 file_dir = os.path.dirname(os.path.realpath('__file__'))
-H1_dir = os.path.join(file_dir, "data/H3") # or data/H3
+H1_dir = os.path.join(file_dir, "H3") # or data/H3
 H1_training_files = filter(lambda x: 'Training' in x, os.listdir(H1_dir))
 
 def data_loader(path):
@@ -56,7 +56,7 @@ HF = buf.HF
 HF_TimeTicks = buf.TimeTicksHF
 
 taggingInfo = buf.TaggingInfo
-
+i
 # calculate power (by convolution)
 L1_P = LF1V * LF1I.conjugate() ## all arithmetics operates elementwise
 L2_P = LF2V * LF2I.conjugate()

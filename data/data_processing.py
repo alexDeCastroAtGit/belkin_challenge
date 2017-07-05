@@ -250,6 +250,11 @@ def generate_tuples(phase_str): # more pythonic way to generate tuples?
                l * [True],  # plot?
                fig_dir)  # save plot here
 
+def process_hf_data():
+    """something is going to happen here"""
+    None
+
+
 ## how to fit a gaussian curve to a time series? feature extraction
 ## gaussian processes?
 ## how to use the HF data?

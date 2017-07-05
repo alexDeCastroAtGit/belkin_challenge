@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="685dbb6b-1347-4043-9657-958b021821a4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/animate_hf_data.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/column_reader.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/data_processing.py" afterPath="$PROJECT_DIR$/data/data_processing.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/data_vis.py" afterPath="$PROJECT_DIR$/data/data_vis.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +18,49 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="data_processing.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="summary_phase_1.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/CSV_OUT/summary_phase_1.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="450" column="25" lean-forward="false" selection-start-line="450" selection-start-column="25" selection-end-line="450" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data_vis.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/data_vis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="58" column="1" lean-forward="false" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HF.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_02_15_1360915201/HF.csv">
+          <provider selected="true" editor-type-id="LargeFileEditor">
+            <state relative-caret-position="-172739">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dryer.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_04_13_1334300401/figs/dryer.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data_processing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/data_processing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="215" column="31" lean-forward="true" selection-start-line="215" selection-start-column="31" selection-end-line="215" selection-end-column="31" />
+            <state relative-caret-position="402">
+              <caret line="255" column="0" lean-forward="false" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -26,63 +68,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dryer.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_06_14_1339657201/figs/dryer.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="front_hall_lights.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_06_14_1339657201/figs/front_hall_lights.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="outdoor_lights.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_06_14_1339657201/figs/outdoor_lights.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dishwasher.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_06_15_1339743601/figs/dishwasher.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="summary_phase_2.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/CSV_OUT/summary_phase_2.csv">
+      <file leaf-file-name="column_reader.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/column_reader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-43359">
+            <state relative-caret-position="228">
+              <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="animate_hf_data.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/animate_hf_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="470">
+              <caret line="36" column="45" lean-forward="false" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+              <folding>
+                <element signature="e#98#117#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeTicksHF.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_04_13_1334300401/TimeTicksHF.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dishwasher.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_10_25_1351148401/figs/dishwasher.png">
+      <file leaf-file-name="toaster.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_04_13_1334300401/figs/toaster.png">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="summary_phase_1.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/CSV_OUT/summary_phase_1.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="45" lean-forward="false" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="toaster.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_12_27_1356595201/figs/toaster.png">
+      <file leaf-file-name="washer.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_04_13_1334300401/figs/washer.png">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -93,8 +119,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -120,17 +146,20 @@
         <option value="$PROJECT_DIR$/data/get_data.sh" />
         <option value="$PROJECT_DIR$/data/process_data.py" />
         <option value="$PROJECT_DIR$/data/step_detection.ipynb" />
-        <option value="$PROJECT_DIR$/data/data_vis.py" />
         <option value="$PROJECT_DIR$/data/load_data.py" />
         <option value="$PROJECT_DIR$/data/data_processing.py" />
+        <option value="$PROJECT_DIR$/data/data_vis.py" />
+        <option value="$PROJECT_DIR$/data/column_reader.py" />
+        <option value="$PROJECT_DIR$/data/batch_transpose.py" />
+        <option value="$PROJECT_DIR$/data/animate_hf_data.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-3782" />
-    <option name="y" value="23" />
+    <option name="x" value="-3308" />
+    <option name="y" value="400" />
     <option name="width" value="1650" />
-    <option name="height" value="1145" />
+    <option name="height" value="1128" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -192,6 +221,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="belkin_challenge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="belkin_challenge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSV_OUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tagged_Training_04_13_1334300401" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="belkin_challenge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="belkin_challenge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSV_OUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tagged_Training_02_15_1360915201" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -218,7 +291,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.data_processing">
+  <component name="RunManager" selected="Python.animate_hf_data">
     <configuration default="false" name="load_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -268,6 +341,42 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="belkin_challenge" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/data_processing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="column_reader" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="belkin_challenge" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/column_reader.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="animate_hf_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="belkin_challenge" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/animate_hf_data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -337,16 +446,20 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.load_data" />
       <item index="1" class="java.lang.String" itemvalue="Python.process_data" />
       <item index="2" class="java.lang.String" itemvalue="Python.data_processing" />
+      <item index="3" class="java.lang.String" itemvalue="Python.column_reader" />
+      <item index="4" class="java.lang.String" itemvalue="Python.animate_hf_data" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.data_processing" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.animate_hf_data" />
         <item index="1" class="java.lang.String" itemvalue="Python.process_data" />
-        <item index="2" class="java.lang.String" itemvalue="Python.load_data" />
+        <item index="2" class="java.lang.String" itemvalue="Python.column_reader" />
+        <item index="3" class="java.lang.String" itemvalue="Python.data_processing" />
+        <item index="4" class="java.lang.String" itemvalue="Python.load_data" />
       </list>
     </recent_temporary>
   </component>
@@ -376,17 +489,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3782" y="23" width="1650" height="1145" extended-state="0" />
-    <editor active="true" />
+    <frame x="-3308" y="400" width="1650" height="1128" extended-state="0" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24501246" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328585" sideWeight="0.50249374" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25261158" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2519305" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34472933" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328585" sideWeight="0.49750623" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33397684" sideWeight="0.49750623" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905548" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -409,51 +521,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_06_13_1339570801/figs/washer.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_06_13_1339570801/figs/toaster.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_06_13_1339570801/figs/Tea Kettle.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_06_13_1339570801/figs/Front Room Lights.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_06_13_1339570801/figs/dryer.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_06_13_1339570801/figs/Bedroom 1 Lights.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_06_13_1339570801/figs/Bathroom 2 Lights.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_06_13_1339570801/figs/Bathroom 1 Lights.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_06_14_1339657201/figs/power_signals_1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_06_14_1339657201/figs/washer.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -554,11 +621,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_02_15_1360915201/figs/microwave.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_02_15_1360915201/figs/master_bath_fan.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -574,37 +636,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_02_15_1360915201/figs/straightening_iron.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_02_15_1360915201/figs/tv_dvr.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_02_15_1360915201/figs/vacuum.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_04_13_1334300401/figs/dryer.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_04_13_1334300401/figs/washer.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_02_15_1360915201/figs/coffee_maker.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_02_15_1360915201/figs/computer.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -624,17 +656,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/summary_phase_1.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="45" lean-forward="false" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/CSV_OUT/summary_phase_2.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-43359">
+        <state relative-caret-position="-8930">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -665,12 +689,124 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_02_15_1360915201/figs/computer.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_02_15_1360915201/figs/microwave.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_02_15_1360915201/figs/straightening_iron.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_02_15_1360915201/figs/tv_dvr.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_04_13_1334300401/figs/central_vacuum.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_04_13_1334300401/figs/dryer.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_04_13_1334300401/figs/toaster.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_04_13_1334300401/figs/washer.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_02_15_1360915201/figs/coffee_maker.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/summary_phase_1.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="450" column="25" lean-forward="false" selection-start-line="450" selection-start-column="25" selection-end-line="450" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_02_15_1360915201/HF.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-172739">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/data_processing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="215" column="31" lean-forward="true" selection-start-line="215" selection-start-column="31" selection-end-line="215" selection-end-column="31" />
+        <state relative-caret-position="402">
+          <caret line="255" column="0" lean-forward="false" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/data_vis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="58" column="1" lean-forward="false" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_02_15_1360915201/HF_transpose.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/batch_transpose.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CSV_OUT/Tagged_Training_04_13_1334300401/TimeTicksHF.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/column_reader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/animate_hf_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="36" column="45" lean-forward="false" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+          <folding>
+            <element signature="e#98#117#0" expanded="true" />
           </folding>
         </state>
       </provider>
